@@ -6,7 +6,19 @@ from io import BytesIO
 import pandas as pd
 
 
-def read_ytm_takeout(filename):
+def read_ytm_takeout(filename: str):
+    """Read the YouTube Music play history from a Google Takeout Zip file
+
+    Parameters
+    ----------
+    filename : str
+        the Google Takeout Zip file path
+
+    Returns
+    -------
+    pd.DataFrame
+        a Pandas DataFrame containing the time, artist and song columns
+    """
     archive = zipfile.ZipFile(filename)
     df = pd.read_json(
         BytesIO(
