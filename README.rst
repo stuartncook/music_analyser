@@ -7,11 +7,11 @@ A simple script to extract a table of artist, song and play time from your YouTu
 Installation
 ------------
 This package can be installed using something like poetry.
-.. code-block:: bash
+
     poetry add --git https://github.com/stuartncook/music_analyser.git
 
 Alternatively, download and run
-.. code-block:: bash
+
     poetry install
 
 Usage
@@ -22,6 +22,7 @@ Deselect all and select "YouTube and YouTube Music", then click "All YouTube dat
 then proceed with next steps, leaving 2 GB and zip file selected.
 
 With the zip file downloaded run
-.. code-block:: python
+
     from music_analyser import read_ytm_takeout
+    
     df = read_ytm_takeout("<takeout filename>")
